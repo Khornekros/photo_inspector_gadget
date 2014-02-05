@@ -27,12 +27,21 @@
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Canvas HorizontalAlignment="Left" Height="585" Margin="26,10,0,0" VerticalAlignment="Top" Width="407">
-                <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="201" Canvas.Left="4" Canvas.Top="600"/>
-                <Button Content="Share" HorizontalAlignment="Left" VerticalAlignment="Top" Width="201" Canvas.Left="205" Canvas.Top="600"/>
-            </Canvas>
+            <Canvas HorizontalAlignment="Left" Height="585" Margin="26,10,0,0" VerticalAlignment="Top" Width="407"/>
 
         </Grid>
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/Icons/share.png" Text="Partager"/>
+            <!--
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+            -->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
