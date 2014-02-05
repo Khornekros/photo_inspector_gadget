@@ -46,9 +46,10 @@
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Import" HorizontalAlignment="Left" Margin="22,600,0,0" VerticalAlignment="Top" Width="201" Click="Button_Click"/>
-            <Button Content="Photo" HorizontalAlignment="Left" Margin="228,600,0,0" VerticalAlignment="Top" Width="201"/>
-            <Canvas HorizontalAlignment="Left" Height="585" Margin="22,10,0,0" VerticalAlignment="Top" Width="407"/>
+            <Canvas HorizontalAlignment="Left" Height="610" Margin="10,10,0,0" VerticalAlignment="Top" Width="436"/>
+            <Image Margin="199,620,181,0" Source="/camera.png" Stretch="Fill"/>
+            <Image Margin="118,620,262,0" Source="/folder.png" Stretch="Fill"/>
+            <Image Margin="281,631,112,9" Source="/button_next.png" Stretch="Fill" RenderTransformOrigin="0.268,0.452"/>
 
         </Grid>
 
