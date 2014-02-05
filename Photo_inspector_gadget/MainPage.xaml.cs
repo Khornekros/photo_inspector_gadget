@@ -32,6 +32,11 @@ namespace Photo_inspector_gadget
             //BuildLocalizedApplicationBar();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
        
 
         // Exemple de code pour la conception d'une ApplicationBar localisée
