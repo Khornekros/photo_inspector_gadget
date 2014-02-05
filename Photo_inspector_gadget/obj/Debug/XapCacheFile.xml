@@ -1,6 +1,9 @@
-﻿<xapCache source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Bin\Debug\Photo_inspector_gadget_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="05/02/2014 08:58:02">
-  <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\obj\Debug\Photo_inspector_gadget.dll" archivePath="Photo_inspector_gadget.dll" lastWriteTime="05/02/2014 08:58:01" />
+﻿<xapCache source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Bin\Debug\Photo_inspector_gadget_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="05/02/2014 11:06:46">
+  <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\obj\Debug\Photo_inspector_gadget.dll" archivePath="Photo_inspector_gadget.dll" lastWriteTime="05/02/2014 11:06:46" />
   <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="05/02/2014 08:55:40" />
+  <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Icons\button_next.png" archivePath="Assets\Icons\button_next.png" lastWriteTime="05/02/2014 11:03:57" />
+  <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Icons\camera.png" archivePath="Assets\Icons\camera.png" lastWriteTime="05/02/2014 11:03:57" />
+  <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Icons\folder.png" archivePath="Assets\Icons\folder.png" lastWriteTime="05/02/2014 11:03:57" />
   <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="05/02/2014 08:55:40" />
   <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="05/02/2014 08:55:40" />
   <file source="C:\Users\Florian\Desktop\PFR\PIG\Photo_inspector_gadget\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="05/02/2014 08:55:40" />
