@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Photo_inspector_gadget.Resources;
+using Microsoft.Devices;
 
 namespace Photo_inspector_gadget
 {
@@ -54,6 +55,13 @@ namespace Photo_inspector_gadget
                 // et seront alimentées par la batterie lorsque l'utilisateur ne se sert pas du téléphone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+#if DEBUG
+            if (Microsoft.Devices.Environment.DeviceType == DeviceType.Emulator)
+            {
+                EmulatorHelper.AddDebugImages();
+            }
+#endif
 
         }
 
