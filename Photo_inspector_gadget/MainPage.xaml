@@ -96,6 +96,7 @@
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton Click="Importer_Click" IconUri="/Assets/Icons/folder.png" Text="Importer"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Icons/camera.png" Text="Capturer"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Icons/fleche-blanche.png" Text="Capturer"/>
             <!--
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
