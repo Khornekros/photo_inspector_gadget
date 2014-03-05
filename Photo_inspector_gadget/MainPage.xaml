@@ -36,11 +36,34 @@
     </toolkit:TransitionService.NavigationOutTransition>
 
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Grid x:Name="Container" Background="Transparent">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="SettingsStateGroup">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0:0:0.3">
+    					<VisualTransition.GeneratedEasingFunction>
+    						<CubicEase EasingMode="EaseInOut"/>
+    					</VisualTransition.GeneratedEasingFunction>
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="SettingsOpenState">
+    				<Storyboard>
+    					<DoubleAnimation Duration="0" To="380" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="LayoutRoot" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="480" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="SettingsPane" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="SettingsClosedState"/>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+        <Grid x:Name="SettingsPane" Margin="-480,0,0,0" Grid.Row="0">
+        	<Grid.Projection>
+        		<PlaneProjection/>
+        	</Grid.Projection>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
 
         <!-- REMARQUE CONCERNANT LA LOCALISATION :
             Pour localiser les chaînes affichées, copiez leurs valeurs dans les clés correctes
@@ -67,7 +90,15 @@
         </StackPanel>
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+               
+        <Grid x:Name="LayoutRoot" Grid.Row="0">
+        	<Grid.Projection>
+        		<PlaneProjection/>
+        	</Grid.Projection>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Canvas x:Name="Canvas" Tap="Canvas_Tap" Height="624" Width="456"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Canvas.Background>
@@ -82,6 +113,19 @@
                        Height="480"/>
             </Canvas>
         </Grid>
+            
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Items}" >               
+                <phone:LongListSelector.ItemTemplate>                
+                    <DataTemplate>                
+                        <StackPanel Margin="0,0,0,17">                
+                            <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>               
+                            <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>                
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </Grid> 
 
         <!--Supprimez les commentaires pour voir une grille d'alignement qui vous aidera à vous assurer que vos contrôles sont
             alignés sur les limites communes.  L'image a une marge supérieure de -32px pour
@@ -96,7 +140,7 @@
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton Click="Importer_Click" IconUri="/Assets/Icons/folder.png" Text="Importer"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Icons/camera.png" Text="Capturer"/>
-            <shell:ApplicationBarIconButton IconUri="/Assets/Icons/fleche-blanche.png" Text="Menu"/>
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_OnClick" IconUri="/Assets/Icons/fleche-blanche.png" Text="Menu"/>
             <!--
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>

@@ -112,6 +112,26 @@ namespace Photo_inspector_gadget
             }
         }
 
+        private bool _isSettingsOpen = false;
+
+        private void ApplicationBarIconButton_OnClick(object sender, EventArgs e)
+        {
+
+            if (_isSettingsOpen)
+            {
+
+                VisualStateManager.GoToState(this, "SettingsClosedState", true);
+
+                _isSettingsOpen = false;
+
+            }
+            else
+            {
+               VisualStateManager.GoToState(this, "SettingsOpenState", true);
+            _isSettingsOpen = true;
+            }
+        }
+
         void photoChooserTask_Completed(object sender, PhotoResult e)
         {
             if (e.TaskResult == TaskResult.OK)
