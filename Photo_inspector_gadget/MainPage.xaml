@@ -36,7 +36,7 @@
     </toolkit:TransitionService.NavigationOutTransition>
 
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
-    <Grid x:Name="Container" Background="Transparent" Width="580">
+    <Grid x:Name="Container" Background="Transparent" Width="580" Height="Auto">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="SettingsStateGroup">
                 <VisualStateGroup.Transitions>
@@ -58,18 +58,36 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid x:Name="SettingsPane" Margin="480,0,0,0" Width="100"  Grid.Row="0" RenderTransformOrigin="0.5,0.5" Background="DimGray" Canvas.ZIndex="1">
-            <Grid.RenderTransform>
+        <ScrollViewer x:Name="SettingsPane" Margin="480,0,0,0" Width="100" Height="Auto"  Grid.Row="0" RenderTransformOrigin="0.5,0.5" Background="DimGray" Canvas.ZIndex="1" >
+            <ScrollViewer.RenderTransform>
                 <CompositeTransform/>
-            </Grid.RenderTransform>
-            <Grid.Projection>
+            </ScrollViewer.RenderTransform>
+            <ScrollViewer.Projection>
                 <PlaneProjection/>
-            </Grid.Projection>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-        </Grid>
+            </ScrollViewer.Projection>
+            
+            <StackPanel Background="Transparent">
+                <!--Adding various controls and UI elements.-->
+                <Button Click="Importer_Click">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Margin="10" Source="/Assets/Images/menu.jpg" />
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
+            </StackPanel>
+        </ScrollViewer>
 
         <!-- REMARQUE CONCERNANT LA LOCALISATION :
             Pour localiser les chaînes affichées, copiez leurs valeurs dans les clés correctes
