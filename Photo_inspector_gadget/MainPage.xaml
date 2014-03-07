@@ -71,9 +71,6 @@
                 <Button Click="btnClick_Click">
                     <Image Margin="-15" Source="/Assets/Images/menu.jpg" />
                 </Button>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
             </StackPanel>
         </ScrollViewer>
 
