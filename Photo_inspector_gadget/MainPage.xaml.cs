@@ -6,6 +6,15 @@ using System;
 using System.Linq;
 using System.Windows;
 using Windows.Phone.Media.Capture;
+using System.Collections.Generic;
+using System.Net;
+using System.Windows.Controls;
+using System.Windows.Navigation;
+using Microsoft.Phone.Shell;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Windows.Media.Imaging;
 
 
 
@@ -32,6 +41,31 @@ namespace Photo_inspector_gadget
             photoChooserTask.Completed += new EventHandler<PhotoResult>(photoChooserTask_Completed);
             // Exemple de code pour la localisation d'ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void CreateControls()
+        {
+           
+            
+           String stringPath = "/Assets/Images/menu.jpg";
+           Uri imageUri = new Uri(stringPath, UriKind.Relative);
+           BitmapImage imageBitmap = new BitmapImage(imageUri);
+           Image myImage = new Image();
+           myImage.Source = imageBitmap;
+           myImage.Tap +=myImage_Tap;
+           myImage.Margin = new Thickness(10); 
+           ListPicture.Children.Add(myImage);
+
+        }
+
+        private void myImage_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            CreateControls();
+        }
+
+        private void btnClick_Click(object sender, RoutedEventArgs e)
+        {
+            CreateControls();
         }
 
         private void InitializeCamera()

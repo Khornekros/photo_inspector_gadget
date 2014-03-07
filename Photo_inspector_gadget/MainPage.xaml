@@ -65,24 +65,12 @@
             <ScrollViewer.Projection>
                 <PlaneProjection/>
             </ScrollViewer.Projection>
-            
-            <StackPanel Background="Transparent">
+           
+            <StackPanel Name="ListPicture" Background="Transparent">
                 <!--Adding various controls and UI elements.-->
-                <Button Click="Importer_Click">
-                    <Button.Template>
-                        <ControlTemplate>
-                            <Image Margin="10" Source="/Assets/Images/menu.jpg" />
-                        </ControlTemplate>
-                    </Button.Template>
+                <Button Click="btnClick_Click">
+                    <Image Margin="-15" Source="/Assets/Images/menu.jpg" />
                 </Button>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
-                <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
                 <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
                 <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
                 <Image Margin="10" Source="/Assets/Images/menu.jpg" Stretch="Fill"/>
